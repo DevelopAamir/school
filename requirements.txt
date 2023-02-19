@@ -1,8 +1,8 @@
-asgiref==3.6.0
-Django==4.1.7
-django-ckeditor==6.5.1
-django-crispy-forms==2.0
-django-js-asset==2.0.0
-gunicorn==20.1.0
-Pillow==9.4.0
-sqlparse==0.4.3
+asgiref==any
+Django==any
+django-ckeditor==any
+django-crispy-forms==any
+django-js-asset==any
+gunicorn==any
+Pillow==any
+sqlparse==any

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satyanarayan Secondary School</title>
+    <link rel="stylesheet" href="/static/index.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+    <nav>
+        <img src="https://satyanarayanschool.edu.np/wp-content/uploads/2022/07/cropped-schoollogowebsite-4.png" class="logo" srcset="">
+        <div>
+            <a href="#">Home</a>
+            <a href="#facility">Facilities</a>
+            <a href="#posts">Posts</a>
+            <a href="#about">About</a>
+            <a href="/contacts" class="bt-border">Contacts</a>
+        </div>
+        
+    </nav>
+    <div class="lander" id="home">
+        <div>
+            <h1>
+                Shree Satyanarayan Higher Secondary School
+            </h1>
+            
+            <a href="/contacts" class="bt-border">
+                Contact
+            </a>
+        </div>
+        
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_4vlxeulb.json"  background="transparent"  speed="1"   loop  autoplay></lottie-player>
+        
+    </div>
+
+    <div class="heading" id="about">
+        About Us
+    </div>
+
+    <div class="about">
+        <div class="about-left">
+            <p>
+                Satyanarayan secondary school is one of the oldest historical institution. Currently, this school is conducting classes from six to twelve. The school team under visionary principalship is trying to impart scientific, practical, and job-oriented education to all.The school is conducting classes from 6 to 12 in Nepali medium from 2009, in English medium from 2072, and electrical engineering from class 9 to 12 under technical and vocational stream from 2073. The total number of students is approximately 1980 i.e. 400 students in Nepali medium, 900 in English medium, and 600 In grades 11 and 12. The computer is taught as a subject from class 6 to 12 and in Electrical engineering.
+            </p>
+        </div>
+        <div class="about-right">
+            
+        </div>
+    </div>
+    
+    <div class="bg-cont" id="facility">
+        <div class="cont-heading">
+            Facilities
+        </div>
+        <div class="facilities">
+            {% for facility in facilities %}
+            <div class="facility-card">
+                <img src="/media/{{facility.img}}" alt="">
+                <p>{{facility.title}}</p>
+            </div>
+            {% endfor %}
+           
+           
+        </div>
+        
+    </div>
+    <div class="bg-cont" id="posts">
+        <div class="cont-heading">
+            Recent News
+        </div>
+        <div class="facilities">
+            {% for post in posts %}
+            <a href="/post/{{post.id}}/">
+                <div class="post-card">
+                    <div class="thumbnail" style="background-image: url('/media/{{post.thumbnail}}')"></div>
+                    <p>{{post.title}}</p>
+                </div>
+            </a>
+            
+            {% endfor %}
+            
+        </div>
+        
+    </div>
+    <footer>
+        <b>@satyanayayan</b>
+    </footer>
+</body>
+</html>

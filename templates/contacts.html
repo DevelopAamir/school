@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satyanarayan Secondary School</title>
+    <link rel="stylesheet" href="/static/index.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+    <nav>
+        <img src="https://satyanarayanschool.edu.np/wp-content/uploads/2022/07/cropped-schoollogowebsite-4.png" class="logo" srcset="">
+        <div>
+            <a href="#">Home</a>
+            <a href="/#facility">Facilities</a>
+            <a href="/#posts">Posts</a>
+            <a href="/#about">About</a>
+            <a href="/contacts" class="bt-border">Contacts</a>
+        </div>
+        
+    </nav>
+    <div class="screen">
+        <div class="heading">Contact Us</div>
+        <div class="contact">
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="email" name="email" placeholder="Enter Email Address" required>
+                <input type="text" name="name" placeholder="Enter Name" required>
+                <textarea name="description" name="description" cols="60" rows="10" placeholder="Description"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+  
+    <footer>
+        <b>@satyanayayan</b>
+    </footer>
+</body>
+</html>
